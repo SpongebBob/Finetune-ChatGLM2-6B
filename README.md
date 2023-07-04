@@ -99,7 +99,10 @@ response, history = model.chat(tokenizer, "你好", history=[])
 
 
 ## 使用自己的数据集
-参考demo格式，修改 `train.sh` 和 `evaluate.sh` 中的 `train_file`、`validation_file`和`test_file`为你自己的 JSON 格式数据集路径。可能还需要增大  `max_length` 来匹配你自己的数据集中的最大输入输出长度。
+参考demo格式，修改 `train.sh` 和 `evaluate.sh` 中的 `train_file`、`validation_file`和`test_file`为你自己的 JSON 格式数据集路径。可能还需要增大  `max_length` 来匹配你自己的数据集中的最大输入输出长度。参考loss
+![image](https://github.com/SpongebBob/Finetune-ChatGLM2-6B/assets/11678997/736cd1d7-4ffc-49c2-a64e-d7f7991802c9)
+
+
 
 
 ## 引用
