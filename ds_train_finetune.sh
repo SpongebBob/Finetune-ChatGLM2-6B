@@ -1,3 +1,4 @@
+#!/bin/bash
 
 LR=6e-6
 DATE=0704
