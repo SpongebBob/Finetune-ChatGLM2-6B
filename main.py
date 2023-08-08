@@ -25,7 +25,7 @@ import sys
 import json
 
 import numpy as np
-from datasets import load_dataset
+from datasets import load_dataset, Features, Value
 import jieba 
 from rouge_chinese import Rouge
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
@@ -98,11 +98,20 @@ def main():
         data_files["test"] = data_args.test_file
         extension = data_args.test_file.split(".")[-1]
 
+    features = Features({
+        'id': Value('string'),  # 样本id
+        'conversations': [{
+            'from': Value('string'),  # 发言者
+            'value': Value('string'),  # 发言内容
+        }]
+    })
+
     raw_datasets = load_dataset(
         extension,
         data_files=data_files,
         cache_dir=model_args.cache_dir,
         use_auth_token=True if model_args.use_auth_token else None,
+        features=features
     )
 
     # Load pretrained model and tokenizer
