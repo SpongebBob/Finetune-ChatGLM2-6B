@@ -8,7 +8,7 @@ ChatGLM2-6B 全参数微调，支持多轮对话的高效微调。
 Demo数据方面使用了开源项目[BELLE](https://github.com/LianjiaTech/BELLE/tree/main/train)提供的数据。
 
 ## 软件依赖
-运行微调需要4.27.1版本的`transformers`。除 ChatGLM-6B 的依赖之外，还需要安装以下依赖
+运行微调需要4.28.1版本的`transformers`。除 ChatGLM-6B 的依赖之外，还需要安装以下依赖
 ```
 pip install rouge_chinese nltk jieba datasets
 ```
